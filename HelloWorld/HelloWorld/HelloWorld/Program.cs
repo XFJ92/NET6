@@ -42,9 +42,7 @@ namespace HelloWorld
 
         static double Temper(double f)
         {
-            double result = (5 * (f - 32)) / 9;
-
-            return result;
+            return (f - 32) / 1.8;
         }
 
             static void Hello(string name)
