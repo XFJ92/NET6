@@ -8,6 +8,27 @@ namespace HelloWorld
 
         static void Main(string[] args)
         {
+
+            string name = "    Xaver Jandura  ";
+
+            if (string.IsNullOrEmpty(name))
+            {
+                //mam jmeno
+            }
+
+
+            string name_trimmed = name.Trim();
+            Console.WriteLine(name);
+            Console.WriteLine(name_trimmed);
+
+            string[] items = name_trimmed.Split(" ");
+            string firstname = items[0];
+            string lastname = items[1];
+            Console.WriteLine(firstname);
+            Console.WriteLine($"firstname: {firstname} lastname: {lastname}");
+
+
+            /*
             Console.WriteLine("Zadávej teplotu v F nebo zmáčnkni " + "x" + "pro konec");
             string input = "";
 
@@ -18,7 +39,7 @@ namespace HelloWorld
 
             // program, ktery na vstupu nacte cislo, pak prevedeme na stupne F, pokud zada pismeno x, program skonci
 
-
+            */
         }
 
 
@@ -40,14 +61,16 @@ namespace HelloWorld
                 double c = ConvertFtoC(f);
                 Console.WriteLine($"{f}°F je {c}°C");
             }
+            /*
             catch (FormatException ex)
             {
                 if (user_input != "x")
                     File.AppendAllText("errorlog.txt","Bad format: " + ex.Message + Environment.NewLine);
             }
+            */
             catch (Exception ex)
             {
-                File.AppendAllText("errorlog.txt","general exception: " + ex.Message + Environment.NewLine);
+                File.AppendAllText("errorlog.txt","General exception: " + ex.Message + Environment.NewLine);
             }
                 return user_input;
         }
