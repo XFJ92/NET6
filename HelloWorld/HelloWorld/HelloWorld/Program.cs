@@ -9,7 +9,7 @@ namespace HelloWorld
         static void Main(string[] args)
         {
 
-            string name = "    Xaver Jandura  ";
+            string name = "     Xaver Jandura     ";
 
             if (string.IsNullOrEmpty(name))
             {
@@ -27,6 +27,15 @@ namespace HelloWorld
             Console.WriteLine(firstname);
             Console.WriteLine($"firstname: {firstname} lastname: {lastname}");
 
+            bool hasXaver = name.Contains("Xaver", StringComparison.Ordinal);
+            Console.WriteLine($"hasXaver: {hasXaver}");
+
+            if (name.ToLower() == "xaver")
+            {
+
+            }
+
+            name.Substring
 
             /*
             Console.WriteLine("Zadávej teplotu v F nebo zmáčnkni " + "x" + "pro konec");
