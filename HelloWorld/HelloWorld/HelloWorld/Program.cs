@@ -31,9 +31,8 @@ namespace HelloWorld
 
             int result = x * 2 + 10;
 
-            x = 55;
-            Console.WriteLine("x: " + x);
             return result;
+
         }
 
             static void Hello(string name)
