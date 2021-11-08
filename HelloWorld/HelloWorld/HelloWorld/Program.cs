@@ -6,37 +6,25 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Hello Universe!");
-
-            string name = "Xaver";
-            string zvolani = "Hello";
-            string pozdrav = zvolani + ", " + name + "!";
-            Console.WriteLine(pozdrav);
-
-
-            Console.WriteLine();
-
-            Console.WriteLine("Jak se jmenuješ?");
-            string name2 = Console.ReadLine();
-            string pozdrav2 = zvolani + ", " + name2 + "!";
-            Console.WriteLine(pozdrav2);
-
-            Console.WriteLine();
-
             Console.WriteLine("Jak se jmenuješ?");
             string name3 = Console.ReadLine();
+
+            Hello(name3);
+        }
+
+        static void Hello(string name3)
+        {
             string name5p = name3;
 
-            if (name == "Xaver")
+            if (name3 == "Xaver")
             {
                 name5p = "Xavere";
             }
-            else if (name == "Iva")
+            else if (name3 == "Iva")
             {
                 name5p = "Ivo";
             }
-            else if (name == "Petr")
+            else if (name3 == "Petr")
             {
                 name5p = "Petře";
             }
@@ -46,8 +34,6 @@ namespace HelloWorld
             }
             string pozdrav3 = "Ahoj " + name5p + "!";
             Console.WriteLine(pozdrav3);
-
-
         }
     }
 }
