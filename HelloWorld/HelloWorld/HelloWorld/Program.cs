@@ -20,8 +20,8 @@ namespace HelloWorld
             //int y = Calc(x);
 
 
-            int f = int.Parse(Console.ReadLine());
-            int c = Temper(f); 
+            double f = int.Parse(Console.ReadLine());
+            double c = Temper(f); 
 
             //Console.WriteLine("Výsledek je: " + Calc(x));
             Console.WriteLine("Výsledek je: " + Temper(c));
@@ -40,9 +40,9 @@ namespace HelloWorld
 
         }
 
-        static int Temper(int f)
+        static double Temper(double f)
         {
-            int result = 5 * (f - 32) / 9;
+            double result = (5 * (f - 32)) / 9;
 
             return result;
         }
