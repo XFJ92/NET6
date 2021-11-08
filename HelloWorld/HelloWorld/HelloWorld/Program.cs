@@ -15,11 +15,16 @@ namespace HelloWorld
             Console.WriteLine("Zadejte celé číslo: ");
             //string num = Console.ReadLine();
 
-            int x = int.Parse(Console.ReadLine());
+            //int x = int.Parse(Console.ReadLine());
 
-            int y = Calc(x);
+            //int y = Calc(x);
 
-            Console.WriteLine("Výsledek je: " + Calc(x));
+
+            int f = int.Parse(Console.ReadLine());
+            int c = Temper(f); 
+
+            //Console.WriteLine("Výsledek je: " + Calc(x));
+            Console.WriteLine("Výsledek je: " + Temper(c));
 
         }
 
@@ -33,6 +38,13 @@ namespace HelloWorld
 
             return result;
 
+        }
+
+        static int Temper(int f)
+        {
+            int result = 5 * (f - 32) / 9;
+
+            return result;
         }
 
             static void Hello(string name)
