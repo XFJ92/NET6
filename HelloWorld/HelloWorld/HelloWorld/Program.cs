@@ -9,6 +9,36 @@ namespace HelloWorld
         static void Main(string[] args)
         {
 
+            // zeptejte se uzivatele na datum narozeni a reknete, zda je plnolety
+
+            Console.WriteLine("   ---   Zadejte své datum narození   ---   ");
+
+            DateTime date = new DateTime(2020, 12, 24, 23, 59, 59);
+
+            DateTime now = DateTime.Now;
+            Console.WriteLine(now);
+
+            var twoweeks = date.AddDays(14);
+            Console.WriteLine(date.ToShortDateString());
+
+            TimeSpan diff = now - date;
+
+            Console.WriteLine("Zadej datum oddelene teckami");
+            DateTime datum = DateTime.Parse(Console.ReadLine());
+
+            TimeSpan ts = DateTime.Now - datum;
+            if (ts.TotalDays / 365.0 >= 18)
+            {
+                Console.WriteLine("Jsi dospely.");
+            }
+            else
+            {
+                Console.WriteLine("Nejsi dospely.");
+            }
+
+
+
+            /*
             // uzivatel zada jmeno a vek do konzole, budeme ukladat do souboru stylem: jmeno;vek
 
 
@@ -36,7 +66,7 @@ namespace HelloWorld
                     Console.WriteLine("Chyba!");
                 }
             }
-            
+            */
 
             /*
             string name = "     Xaver Jandura     ";
@@ -79,7 +109,6 @@ namespace HelloWorld
 
             */
         }
-
 
         /// <summary>
         /// Convert temperature from F to C and print to console
