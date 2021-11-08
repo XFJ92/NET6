@@ -7,7 +7,15 @@ namespace HelloWorld
 
         static void Main(string[] args)
         {
-            ConvertFtoCandPrint();
+            Console.WriteLine("Zadávej teplotu v F nebo zmáčnkni " + "x" + "pro konec");
+            string input = "";
+
+            while(input != "x")
+            {
+                input = ConvertFtoCandPrint();
+            }
+
+            // program, ktery na vstupu nacte cislo, pak prevedeme na stupne F, pokud zada pismeno x, program skonci
 
 
         }
@@ -16,17 +24,27 @@ namespace HelloWorld
         /// <summary>
         /// Convert temperature from F to C and print to console
         /// </summary>
-        static void ConvertFtoCandPrint()
+        static string ConvertFtoCandPrint()
         {
             // vytvorte metodu ktera prevadi stupne F na C
             // a prevadejte cisla ze vstupu od uzivatele
 
             Console.WriteLine("Zadej teplotu ve stupnich F:");
 
-            double f = double.Parse(Console.ReadLine());
-            double c = ConvertFtoC(f);
+            string user_input = Console.ReadLine();
 
-            Console.WriteLine($"{f}°F je {c}°C");
+            if (user_input == "x")
+            return user_input;
+
+            else
+            {
+
+                double f = double.Parse(user_input);
+                double c = ConvertFtoC(f);
+
+                Console.WriteLine($"{f}°F je {c}°C");
+                return user_input;
+            }
         }
 
         static void Hello(string name)
@@ -75,5 +93,4 @@ namespace HelloWorld
             return (tempF - 32) / 1.8;
         }
     }
-
 }
