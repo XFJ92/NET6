@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace HelloWorld
 {
@@ -33,18 +34,22 @@ namespace HelloWorld
 
             string user_input = Console.ReadLine();
 
-            if (user_input == "x")
-            return user_input;
-
-            else
+            try
             {
-
                 double f = double.Parse(user_input);
                 double c = ConvertFtoC(f);
-
                 Console.WriteLine($"{f}°F je {c}°C");
-                return user_input;
             }
+            catch (FormatException ex)
+            {
+                if (user_input != "x")
+                    File.AppendAllText("errorlog.txt","Bad format: " + ex.Message + Environment.NewLine);
+            }
+            catch (Exception ex)
+            {
+                File.AppendAllText("errorlog.txt","general exception: " + ex.Message + Environment.NewLine);
+            }
+                return user_input;
         }
 
         static void Hello(string name)
