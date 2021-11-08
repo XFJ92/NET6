@@ -24,6 +24,28 @@ namespace HelloWorld
 
             Console.WriteLine();
 
+            Console.WriteLine("Jak se jmenuješ?");
+            string name3 = Console.ReadLine();
+            string name5p = name3;
+
+            if (name == "Xaver")
+            {
+                name5p = "Xavere";
+            }
+            else if (name == "Iva")
+            {
+                name5p = "Ivo";
+            }
+            else if (name == "Petr")
+            {
+                name5p = "Petře";
+            }
+            else
+            {
+                name5p = name5p + ", promň, ale tvé jméno neumím skloňovat";
+            }
+            string pozdrav3 = "Ahoj " + name5p + "!";
+            Console.WriteLine(pozdrav3);
 
 
         }
