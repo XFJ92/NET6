@@ -9,6 +9,36 @@ namespace HelloWorld
         static void Main(string[] args)
         {
 
+            // uzivatel zada jmeno a vek do konzole, budeme ukladat do souboru stylem: jmeno;vek
+
+
+            Console.WriteLine("Zadejte jméno: ");
+            string name = Console.ReadLine();
+            Console.WriteLine("Zadejte příjmení: ");
+            string surname = Console.ReadLine();
+            Console.WriteLine("Zadejte věk: ");
+            string age = Console.ReadLine();
+
+            if(name == "x" | surname == "x" | age == "x")
+            {
+                Console.WriteLine("Ukončili jste program.");
+            }
+            else
+            {
+                try
+                {
+                    File.AppendAllText("lide.txt", $"{name};{surname};{age}" + Environment.NewLine);
+                }
+
+                catch (Exception ex)
+                {
+                    File.AppendAllText("log.txt", "General exception: " + ex.Message + Environment.NewLine);
+                    Console.WriteLine("Chyba!");
+                }
+            }
+            
+
+            /*
             string name = "     Xaver Jandura     ";
 
             if (string.IsNullOrEmpty(name))
@@ -34,8 +64,7 @@ namespace HelloWorld
             {
 
             }
-
-            name.Substring
+            */
 
             /*
             Console.WriteLine("Zadávej teplotu v F nebo zmáčnkni " + "x" + "pro konec");
