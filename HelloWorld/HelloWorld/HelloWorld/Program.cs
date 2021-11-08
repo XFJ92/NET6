@@ -6,33 +6,49 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Jak se jmenuješ?");
-            string name3 = Console.ReadLine();
+            //Console.WriteLine("Jak se jmenuješ?");
+            //string name = Console.ReadLine();
 
-            Hello(name3);
+            //Hello(name);
 
-            //int x = 5;
-            //int y = x + x;
-            Console.WriteLine("Zadejte cislo: ");
-            int x = Console.ReadLine();
-            int y = x * 2 + 10;
-            Console.WriteLine(y);
+
+            Console.WriteLine("Zadejte celé číslo: ");
+            //string num = Console.ReadLine();
+
+            int x = int.Parse(Console.ReadLine());
+
+            int y = Calc(x);
+
+            Console.WriteLine("Výsledek je: " + Calc(x));
 
         }
 
-        static void Hello(string name3)
-        {
-            string name5p = name3;
 
-            if (name3 == "Xaver")
+        static int Calc(int x)
+        {
+            // vytvorte metodu ktera vstup vynasoby 2
+            // a pricte  10
+
+            int result = x * 2 + 10;
+
+            x = 55;
+            Console.WriteLine("x: " + x);
+            return result;
+        }
+
+            static void Hello(string name)
+        {
+            string name5p = name;
+
+            if (name == "Xaver")
             {
                 name5p = "Xavere";
             }
-            else if (name3 == "Iva")
+            else if (name == "Iva")
             {
                 name5p = "Ivo";
             }
-            else if (name3 == "Petr")
+            else if (name == "Petr")
             {
                 name5p = "Petře";
             }
@@ -40,8 +56,8 @@ namespace HelloWorld
             {
                 name5p = name5p + ", promň, ale tvé jméno neumím skloňovat";
             }
-            string pozdrav3 = "Ahoj " + name5p + "!";
-            Console.WriteLine(pozdrav3);
+            string pozdrav = "Ahoj " + name5p + "!";
+            Console.WriteLine(pozdrav);
         }
     }
 }
