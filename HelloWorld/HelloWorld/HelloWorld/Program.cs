@@ -12,7 +12,7 @@ namespace HelloWorld
             //Hello(name);
 
 
-            Console.WriteLine("Zadejte celé číslo: ");
+            Console.WriteLine("Zadej teplotu ve st. F.: ");
             //string num = Console.ReadLine();
 
             //int x = int.Parse(Console.ReadLine());
@@ -20,11 +20,11 @@ namespace HelloWorld
             //int y = Calc(x);
 
 
-            double f = int.Parse(Console.ReadLine());
+            double f = double.Parse(Console.ReadLine());
             double c = Temper(f); 
 
             //Console.WriteLine("Výsledek je: " + Calc(x));
-            Console.WriteLine("Výsledek je: " + Temper(c));
+            Console.WriteLine("Výsledek je: " + Temper(f));
 
         }
 
