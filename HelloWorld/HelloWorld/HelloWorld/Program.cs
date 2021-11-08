@@ -10,6 +10,14 @@ namespace HelloWorld
             string name3 = Console.ReadLine();
 
             Hello(name3);
+
+            //int x = 5;
+            //int y = x + x;
+            Console.WriteLine("Zadejte cislo: ");
+            int x = Console.ReadLine();
+            int y = x * 2 + 10;
+            Console.WriteLine(y);
+
         }
 
         static void Hello(string name3)
