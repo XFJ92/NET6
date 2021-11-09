@@ -14,7 +14,7 @@ namespace HelloWorld
 
 
             Car car = new Car("C12345", "silver", 794124.4);
-            Console.WriteLine($"Informace o autu: {platenumber} {color} {color}");
+            Console.WriteLine($"Informace o autu: {platenumber} {color} {kilometers}");
 
         }
 
