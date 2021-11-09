@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HelloWorld.Model;
+using System;
 using System.IO;
 
 namespace HelloWorld
@@ -9,33 +10,35 @@ namespace HelloWorld
         static void Main(string[] args)
         {
 
-            int age_max = 0;
-            string name_oldest = "";
+            int i = 3;
 
-            foreach (var line in File.ReadLines("lide.txt"))  //foreach pouziju na cteni kazdeho radku
-            {
-                string[] items = line.Split(';'); //rozdelim si hodnoty podle stredniku
-                
-                string firstname = items[0];
-                string surname = items[1];
-                string age_s = items[2];
+            Person p1 = new Person();
+            p1.FirstName = "Xaver František";
+            p1.LastName = "Jandura";
+            p1.DateOfBirth = new DateTime(1992, 03, 25);
+            int age1 = p1.Age();
 
-                int age = int.Parse(age_s); //prevedu string na cislo
+            Person p2 = new Person();
+            p2.FirstName = "Alois";
+            p2.LastName = "Pumpička";
+            p2.DateOfBirth = new DateTime(1991, 12, 24);
+            int age2 = p2.Age();
 
-                if (age > age_max)
-                {
-                    age_max = age;
-                    name_oldest = firstname;
-                }
+            Person oldest = p1.Age() >= p2.Age() ? p1 : p2;
 
-            }
-
-            Console.WriteLine($"Nejstarší je {name_oldest} ({age_max})");
+            Console.WriteLine($"Nejstarší je {oldest.FirstName} {oldest.LastName}");
 
 
+            Car opel = new Car();
+            opel.PlateNumber = "A12345";
+            opel.Color = "Green";
+            opel.Kilometers = 5478.8;
+            
 
-
-
+            Car skoda = new Car();
+            skoda.PlateNumber = "B12345";
+            skoda.Color = "Red";
+            skoda.Kilometers = 78987.1;
 
 
 
@@ -139,6 +142,32 @@ namespace HelloWorld
             // program, ktery na vstupu nacte cislo, pak prevedeme na stupne F, pokud zada pismeno x, program skonci
 
             */
+        }
+
+        private static void FindOldest()
+        {
+            int age_max = 0;
+            string name_oldest = "";
+
+            foreach (var line in File.ReadLines("lide.txt"))  //foreach pouziju na cteni kazdeho radku
+            {
+                string[] items = line.Split(';'); //rozdelim si hodnoty podle stredniku
+
+                string firstname = items[0];
+                string surname = items[1];
+                string age_s = items[2];
+
+                int age = int.Parse(age_s); //prevedu string na cislo
+
+                if (age > age_max)
+                {
+                    age_max = age;
+                    name_oldest = firstname;
+                }
+
+            }
+
+            Console.WriteLine($"Nejstarší je {name_oldest} ({age_max})");
         }
 
         /// <summary>
