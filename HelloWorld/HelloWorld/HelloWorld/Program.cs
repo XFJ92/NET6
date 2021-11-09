@@ -11,12 +11,52 @@ namespace HelloWorld
 
         static void Main(string[] args)
         {
+            //vypsat lidi ze souboru people.txt do konzole tak, aby byla videt pouze jejich jmena a zaroven byla oddelena carkou
+
+            /*
+            var people = PersonData.LoadPeople();
+
+            Console.WriteLine($"V souboru je: {people.Count} lidí");
+
+            foreach (var item in people)
+            {
+                Console.Write(item.FirstName + ", ");
+            }
+
+            Console.ReadLine();
+            // funkcni, ale ma to na konci jmena carku, coz nechceme (viz nize)
+            */
+
+            List<string> names = new List<string>();
+            foreach (var p in PersonData.LoadPeople())
+            {
+                names.Add(p.FirstName + " " + p.LastName);
+
+            }
+            
+            var joined = string.Join(", ", names);
+            Console.WriteLine(joined);
+
+
+            /*
+            Person p1 = new Person();
+            Person p2 = new Person();
+            Person p3 = new Person();
+            Person p4 = new Person();
+            Person p5 = new Person();
+
+            List<Person> people = new List<Person>() { p1, p2, p3, p4, p5 };
+
+            foreach(var p in people)
+            {
+
+            }
 
 
             var people = PersonData.LoadPeople();
 
             Console.WriteLine(people.Count);
-
+            */
 
             /*
             Person p = new Person("Martin", "Novák", new DateTime(1999, 11, 22)); // var p = new Person("Martin", "Novák", new DateTime(1999, 11, 22));
