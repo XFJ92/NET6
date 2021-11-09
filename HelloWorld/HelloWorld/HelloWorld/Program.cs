@@ -9,12 +9,14 @@ namespace HelloWorld
 
         static void Main(string[] args)
         {
-            Person p = new Person("Martin", "Novák", new DateTime(1999, 11, 22));
+            Person p = new Person("Martin", "Novák", new DateTime(1999, 11, 22)); // var p = new Person("Martin", "Novák", new DateTime(1999, 11, 22));
+            p.HomeAddress = new Address("Praha", "Trojská");
+            //p.HomeAddress.City = "Praha";
+            
             Console.WriteLine(p);
 
 
             Car car = new Car("C12345", "silver", 794124.4);
-            Console.WriteLine($"Informace o autu: {platenumber} {color} {kilometers}");
 
         }
 
