@@ -9,6 +9,37 @@ namespace HelloWorld
         static void Main(string[] args)
         {
 
+            int age_max = 0;
+            string name_oldest = "";
+
+            foreach (var line in File.ReadLines("lide.txt"))  //foreach pouziju na cteni kazdeho radku
+            {
+                string[] items = line.Split(';'); //rozdelim si hodnoty podle stredniku
+                
+                string firstname = items[0];
+                string surname = items[1];
+                string age_s = items[2];
+
+                int age = int.Parse(age_s); //prevedu string na cislo
+
+                if (age > age_max)
+                {
+                    age_max = age;
+                    name_oldest = firstname;
+                }
+
+            }
+
+            Console.WriteLine($"Nejstarší je {name_oldest} ({age_max})");
+
+
+
+
+
+
+
+
+            /*
             // zeptejte se uzivatele na datum narozeni a reknete, zda je plnolety
 
             Console.WriteLine("   ---   Zadejte své datum narození   ---   ");
@@ -36,7 +67,7 @@ namespace HelloWorld
                 Console.WriteLine("Nejsi dospely.");
             }
 
-
+            */
 
             /*
             // uzivatel zada jmeno a vek do konzole, budeme ukladat do souboru stylem: jmeno;vek
@@ -187,5 +218,36 @@ namespace HelloWorld
         {
             return (tempF - 32) / 1.8;
         }
+
+        static int AgeSolver(DateTime dateofbirth)
+        {
+            DateTime today = DateTime.Today;
+
+            return (int)(today - dateofbirth).TotalDays / 365;
+        }
+
+        static int Compare(int x, int y)
+        {
+            /*if (x > y)
+                return x;
+            else
+                return y;
+            */
+            
+            //return Math.Max(x,y);
+            
+            return (x > y ? x : y);
+        }
+
+        static bool IsEndingOva(string jmeno)
+        {
+            return jmeno.EndsWith("ova");
+        }
+
+        static bool IsEndingOva(string jmeno, bool ignoreCase)
+        {
+            return jmeno.EndsWith("ova", StringComparison.OrdinalIgnoreCase);
+        }
+
     }
 }
