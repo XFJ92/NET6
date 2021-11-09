@@ -24,5 +24,9 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+        private void btnHello_Click(object sender, RoutedEventArgs e)
+        {
+            txbInfo.Text = "Ahoj";
+        }
     }
 }

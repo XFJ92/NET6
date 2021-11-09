@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Aplikace - hlavní okno" Height="450" Width="800">
     <Grid>
-
+        <Button x:Name="btnHello" Content="Button" HorizontalAlignment="Center" Margin="0,305,0,0" VerticalAlignment="Top" Height="55" Width="145" Click="btnHello_Click"/>
+        <TextBlock x:Name="txbInfo" HorizontalAlignment="Center" Margin="0,87,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="62" Width="194" FontSize="36"/>
     </Grid>
 </Window>
