@@ -8,6 +8,24 @@ namespace HelloWorld.Model
 {
     class Person
     {
+        
+        public Person()
+        {
+
+        }
+        public Person(string firstname, string lastname)
+        {
+            FirstName = firstname;
+            LastName = lastname;
+        }
+
+        public Person(string firstname, string lastname, DateTime dob)
+        {
+            FirstName = firstname;
+            LastName = lastname;
+            DateOfBirth = dob;
+        }
+
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
@@ -19,6 +37,11 @@ namespace HelloWorld.Model
             DateTime today = DateTime.Today;
 
             return (int)(today - DateOfBirth).TotalDays / 365;
+        }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName}";
         }
 
 

@@ -9,8 +9,18 @@ namespace HelloWorld
 
         static void Main(string[] args)
         {
+            Person p = new Person("Martin", "Novák", new DateTime(1999, 11, 22));
+            Console.WriteLine(p);
 
-            int i = 3;
+
+            Car car = new Car("C12345", "silver", 794124.4);
+            Console.WriteLine($"Informace o autu: {platenumber} {color} {color}");
+
+        }
+
+
+        private static void StarsiOsoba()
+        {
 
             Person p1 = new Person();
             p1.FirstName = "Xaver František";
