@@ -1,5 +1,7 @@
-﻿using HelloWorld.Model;
+﻿using HelloWorld.Data;
+using HelloWorld.Model;
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace HelloWorld
@@ -9,14 +11,75 @@ namespace HelloWorld
 
         static void Main(string[] args)
         {
+
+
+            var people = PersonData.LoadPeople();
+
+            Console.WriteLine(people.Count);
+
+
+            /*
             Person p = new Person("Martin", "Novák", new DateTime(1999, 11, 22)); // var p = new Person("Martin", "Novák", new DateTime(1999, 11, 22));
-            p.HomeAddress = new Address("Praha", "Trojská");
-            //p.HomeAddress.City = "Praha";
-            
-            Console.WriteLine(p);
+            //p.HomeAddress = new Address("Praha", "Trojská");
+            p.HomeAddress.City = "Praha";
+            p.HomeAddress.Street = "Ječná";
+
+            Person p2 = new Person("Jarmila", "Nováková", new DateTime(1989, 01, 12));
+            p2.HomeAddress.City = "Brno";
+            p2.HomeAddress.Street = "Jilemnická";
+
+            Person p3 = new Person("Iveta", "Bednářová", new DateTime(1899, 03, 24));
+            p3.HomeAddress.City = "Karviná";
+            p3.HomeAddress.Street = "Pražská";
+
+            Person p4 = new Person("Mia", "Levicová", new DateTime(1921, 05, 27));
+            p4.HomeAddress.City = "Praha";
+            p4.HomeAddress.Street = "Vítečná";
+
+            Person p5 = new Person("Karel", "Vomáčka", new DateTime(1938, 02, 28));
+            p5.HomeAddress.City = "Brno";
+            p5.HomeAddress.Street = "Strakonická";
+
+            Person p6 = new Person("Josef", "Pepík", new DateTime(1966, 09, 10));
+            p6.HomeAddress.City = "Brno";
+            p6.HomeAddress.Street = "Bulharová";
+
+            Person p7 = new Person("Alois", "Pumpička", new DateTime(1968, 08, 11));
+            p7.HomeAddress.City = "Hradec Králové";
+            p7.HomeAddress.Street = "U hradu";
+
+            Person p8 = new Person("Vítek", "Bugot", new DateTime(1967, 05, 22));
+            p8.HomeAddress.City = "Plzeň";
+            p8.HomeAddress.Street = "V ulici";
+
+            Person p9 = new Person("Ivana", "Salámová", new DateTime(1912, 05, 18));
+            p9.HomeAddress.City = "Ostrava";
+            p9.HomeAddress.Street = "Pražská";
+
+            Person p10 = new Person("Božena", "Tichá", new DateTime(1998, 01, 09));
+            p10.HomeAddress.City = "Brno";
+            p10.HomeAddress.Street = "Nová";
+
+            PersonData.SavePerson(p);
+            PersonData.SavePerson(p2);
+            PersonData.SavePerson(p3);
+            PersonData.SavePerson(p4);
+            PersonData.SavePerson(p5);
+            PersonData.SavePerson(p6);
+            PersonData.SavePerson(p7);
+            PersonData.SavePerson(p8);
+            PersonData.SavePerson(p9);
+            PersonData.SavePerson(p10);
+
+            */
+
+            //List<int> numbers = new List<int>();
+            //List<string> names = new List<string>();
+
+            //Console.WriteLine(p);
 
 
-            Car car = new Car("C12345", "silver", 794124.4);
+            //Car car = new Car("C12345", "silver", 794124.4);
 
         }
 

@@ -28,7 +28,7 @@ namespace HelloWorld.Model
             DateOfBirth = dob;
         }
 
-        public Address HomeAddress { get; set; } = new Address();
+        public Address HomeAddress { get; set; } = new Address(); //jiny zpusob inicializace
         
 
         public string FirstName { get; set; }
