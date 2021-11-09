@@ -7,7 +7,15 @@
         mc:Ignorable="d"
         Title="Aplikace - hlavní okno" Height="450" Width="800">
     <Grid>
-        <Button x:Name="btnHello" Content="Button" HorizontalAlignment="Center" Margin="0,305,0,0" VerticalAlignment="Top" Height="55" Width="145" Click="btnHello_Click"/>
-        <TextBlock x:Name="txbInfo" HorizontalAlignment="Center" Margin="0,87,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="62" Width="194" FontSize="36"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF8121C3" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="btnHello" Content="Run" HorizontalAlignment="Center" Margin="0,305,0,0" VerticalAlignment="Top" Height="55" Width="145" Click="btnHello_Click" FontSize="24"/>
+        <TextBlock x:Name="txbInfo" HorizontalAlignment="Center" Margin="0,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="62" Width="537" FontSize="36" TextAlignment="Center" Foreground="White"/>
+        <TextBox x:Name="txbBox" HorizontalAlignment="Center" Margin="0,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="536" Height="51" Background="Gainsboro"/>
+        <TextBlock x:Name="txtBlock" HorizontalAlignment="Left" Margin="132,198,0,0" Text="Zadej své jméno:" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
     </Grid>
 </Window>

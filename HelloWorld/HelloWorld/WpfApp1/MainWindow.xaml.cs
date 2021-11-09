@@ -26,7 +26,7 @@ namespace WpfApp1
         }
         private void btnHello_Click(object sender, RoutedEventArgs e)
         {
-            txbInfo.Text = "Ahoj";
+            txbInfo.Text = txbBox.Text + "e, zřejmě Ti to funguje!" ;
         }
     }
 }
