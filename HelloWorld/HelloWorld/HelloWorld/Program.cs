@@ -18,48 +18,57 @@ namespace HelloWorld
 
             /// z "numebers" zjistěte:
             /// 1. počet prvků v poli
-            var count = numbers.Count();
+            var count = numbers
+                .Count();
             Console.WriteLine(count);
 
             /// 2. největší hodnotu
-            var max = numbers.Max();
+            var max = numbers
+                .Max();
             Console.WriteLine(max);
 
             /// 3. nejmenší hodnotu
-            var min = numbers.Min();
+            var min = numbers
+                .Min();
             Console.WriteLine(min);
 
             /// 4. průměr
-            var avg = numbers.Average();
+            var avg = numbers
+                .Average();
             Console.WriteLine(avg);
 
             /// 5. kolik obsahuje pole kladných čísel
 
             var positive = numbers
-                .Where(x => x >= 0).Count();
+                .Where(x => x >= 0)
+                .Count();
             Console.WriteLine(positive);
 
             /// 6. kolik obsahuje pole záporných čísel
             var count_neg = numbers
-                .Where(x => x <= 0).Count();
+                .Where(x => x <= 0)
+                .Count();
             Console.WriteLine(count_neg);
 
             /// 7. sumu všech hodnot
-            var sum = numbers.Sum();
+            var sum = numbers
+                .Sum();
             Console.WriteLine(sum);
 
             /// 8. sumu kladných hodnot
             var sum_pos = numbers
-                .Where(x => x >= 0).Sum();
+                .Where(x => x >= 0)
+                .Sum();
             Console.WriteLine(sum_pos);
 
             /// 9. seřaďte pole od nejmenších po největší hodnoty,
             /// přeskočte první 3 prvky a sečtěte zbytek hodnot
 
-            var sort = numbers.OrderBy(x => x)
+            var sortSkipCut = numbers
+                .OrderBy(x => x)
                 .Skip(3)
                 .Sum();
-            Console.WriteLine($"Vysledek je: {sort}");
+            Console.WriteLine($"Vysledek je: {sortSkipCut}");
 
 
 
