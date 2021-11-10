@@ -11,6 +11,17 @@ namespace HelloWorld
 
         static void Main(string[] args)
         {
+
+            Point2D pointA = new Point2D(10, 15);
+            Point2D pointB = new Point2D(100, 100);
+
+
+            Console.WriteLine(pointA);
+            Console.WriteLine(pointB);
+            var soucet = PointMath.AddPoints(pointA, pointB);
+            Console.WriteLine($"{soucet}");
+
+
             //vypsat lidi ze souboru people.txt do konzole tak, aby byla videt pouze jejich jmena a zaroven byla oddelena carkou
 
             /*
@@ -27,6 +38,7 @@ namespace HelloWorld
             // funkcni, ale ma to na konci jmena carku, coz nechceme (viz nize)
             */
 
+            /*
             List<string> names = new List<string>();
             foreach (var p in PersonData.LoadPeople())
             {
@@ -36,7 +48,7 @@ namespace HelloWorld
             
             var joined = string.Join(", ", names);
             Console.WriteLine(joined);
-
+            */
 
             /*
             Person p1 = new Person();

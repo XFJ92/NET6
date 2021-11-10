@@ -17,6 +17,30 @@ namespace HelloWorld.Model
             Y = y;
         }
 
+        /// <summary>
+        /// Pricte vstupni bod k tomuto bodu a vysledek vrati jako novy bod.
+        /// </summary>
+        /// <param name="point"></param>
+        /// <returns></returns>
+
+        public Point2D AddAnotherPoints(Point2D point)
+        {
+            Point2D soucetBodu = new Point2D(X + point.X, Y + point.Y);
+            return soucetBodu;
+        }
+
+        /// <summary>
+        /// Modifikuje tento bod, pricte hodnotu vstupniho parametru point k tomuto bodu.
+        /// </summary>
+        /// <param name="point"></param>
+
+        public void AddPoints(Point2D point)
+        {
+            X += point.X;
+            Y += point.Y;
+        }
+
+
         public int AreaCalc()
         {
             return (int)(X * Y);
