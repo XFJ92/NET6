@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HelloWorld.Model
 {
-    class Person
+    public class Person
     {
 
         public Person()

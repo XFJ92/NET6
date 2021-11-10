@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HelloWorld.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,18 @@ namespace WpfApp1
         private void btnHello_Click(object sender, RoutedEventArgs e)
         {
             txbInfo.Text = txbBox.Text + ". Zřejmě Ti to funguje!" ;
+        }
+
+        private void btnPersonDetail_Click(object sender, RoutedEventArgs e)
+        {
+            Person p = new Person();
+            p.FirstName = "Alice";
+            p.LastName = "Vozábalová";
+            p.DateOfBirth = new DateTime(1992, 03, 25);
+
+            PersonDetail pdwindow = new PersonDetail(p);
+
+            pdwindow.Show();
         }
     }
 }

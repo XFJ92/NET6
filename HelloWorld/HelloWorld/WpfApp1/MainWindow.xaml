@@ -13,9 +13,10 @@
                 <GradientStop Color="#FF8121C3" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="btnHello" Content="Run" HorizontalAlignment="Center" Margin="0,305,0,0" VerticalAlignment="Top" Height="55" Width="145" Click="btnHello_Click" FontSize="24"/>
+        <Button x:Name="btnHello" Content="Run" HorizontalAlignment="Center" Margin="0,305,0,0" VerticalAlignment="Top" Height="55" Width="145" Click="btnHello_Click" FontSize="24" FontWeight="Bold"/>
         <TextBlock x:Name="txbInfo" HorizontalAlignment="Center" Margin="0,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="62" Width="537" FontSize="36" TextAlignment="Center" Foreground="White"/>
         <TextBox x:Name="txbBox" HorizontalAlignment="Center" Margin="0,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="536" Height="51" Background="Gainsboro"/>
         <TextBlock x:Name="txtBlock" HorizontalAlignment="Left" Margin="132,198,0,0" Text="Zadej své jméno:" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+        <Button x:Name="btnPersonDetail" Content="Detail osoby" HorizontalAlignment="Left" Margin="171,312,0,0" VerticalAlignment="Top" Height="40" Width="108" FontSize="16" FontWeight="Normal" Click="btnPersonDetail_Click"/>
     </Grid>
 </Window>
