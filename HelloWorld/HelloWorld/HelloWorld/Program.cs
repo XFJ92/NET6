@@ -53,6 +53,14 @@ namespace HelloWorld
                 .Where(x => x >= 0).Sum();
             Console.WriteLine(sum_pos);
 
+            /// 9. seřaďte pole od nejmenších po největší hodnoty,
+            /// přeskočte první 3 prvky a sečtěte zbytek hodnot
+
+            var sort = numbers.OrderBy(x => x)
+                .Skip(3)
+                .Sum();
+            Console.WriteLine($"Vysledek je: {sort}");
+
 
 
 
