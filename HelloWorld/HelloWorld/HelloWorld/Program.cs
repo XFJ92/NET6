@@ -3,6 +3,7 @@ using HelloWorld.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using DayOfWeek = HelloWorld.Model.DayOfWeek;
 
 namespace HelloWorld
 {
@@ -12,6 +13,14 @@ namespace HelloWorld
         static void Main(string[] args)
         {
 
+            Console.WriteLine(DayOfWeek.GetDayNameCZ(2));
+            Console.WriteLine(DayOfWeek.GetDayNameCZarray(5));
+            Console.WriteLine(DayOfWeek.GetDayNameCZswitch(7));
+            Console.WriteLine(DayOfWeek.GetDayIndex("středa"));
+
+
+
+            /*
             Point2D pointA = new Point2D(10, 15);
             Point2D pointB = new Point2D(100, 100);
 
@@ -20,7 +29,7 @@ namespace HelloWorld
             Console.WriteLine(pointB);
             var soucet = PointMath.AddPoints(pointA, pointB);
             Console.WriteLine($"{soucet}");
-
+            */
 
             //vypsat lidi ze souboru people.txt do konzole tak, aby byla videt pouze jejich jmena a zaroven byla oddelena carkou
 
