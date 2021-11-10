@@ -82,6 +82,23 @@ namespace HelloWorld.Model
             }
         }
 
+
+        //vypsani daneho dne v tydnu po zadani cisla jeho poradi v tydnu pomoci Listu
+        private static List<string> dayslist = new List<string> {
+                "pondělí",
+                "úterý",
+                "středa",
+                "čtvrtek",
+                "pátek",
+                "sobota",
+                "neděle"
+            };
+        public static int GetDayIndexKist(string dayName)
+        {
+            return dayslist.IndexOf(dayName.ToLower()) + 1;
+        }
+
+
         public static string GetDayNameCZarray(int dayIndex)
         {
             string[] days = new[] { "pondělí", "úterý", "středa", "čtvrtek", "pátek", "sobota", "neděle" };
