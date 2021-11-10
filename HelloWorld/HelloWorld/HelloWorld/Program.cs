@@ -21,7 +21,9 @@ namespace HelloWorld
 
             //where - filtruje kolekci
 
-            var results = numbers.Where(number => number >= 0 && number <= 100);
+            var results = numbers
+                .Where(number => number >= 0) //nebo lze zapsat v jednom dotazu: (number => number >= 0 && number <= 100)
+                .Where(number => number <= 100); //alternativa k zapisu nove podminky
 
             foreach(var item in results)
             {
